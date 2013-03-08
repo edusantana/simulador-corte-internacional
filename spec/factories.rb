@@ -14,6 +14,10 @@ FactoryGirl.define do
     "Nome do Caso - #{n}"
   end
 
+  sequence :proposta_nome do |n|
+    "Proposta de Caso - #{n}"
+  end
+
   factory :user do
     email { :user_email }
     password 'password'
@@ -35,5 +39,13 @@ FactoryGirl.define do
     descricao 'Descricao do caso'
   end
 
+  factory :proposta do
+    nome { generate(:caso_nome) }
+    grupo
+    assunto 'Assunto do caso'
+    descricao 'Descricao do caso'
+    anexo { File.open(File.join(Rails.root, 'test','integration','resources','proposta.zip')) }
+    
+  end
 
 end

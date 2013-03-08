@@ -1,6 +1,6 @@
 # language: pt
 
-@caso_proposto
+@proposta
 Funcionalidade: Proposta de casos para estudo
   Para registrar as propostas de casos que tenho interesse em estudar
   Como lider do grupo
@@ -17,7 +17,7 @@ Contexto:
   |ele@mail.como            |password|false|
   E estou logado como "eu@mail.com"
 
-@wip
+
 Cenário: Propondo um novo caso
   Dado existe um grupo que sou membro
   E estou na página das propostas de caso do grupo
@@ -31,22 +31,24 @@ Cenário: Propondo um novo caso
   E sou o proprositor da proposta
   E estou vendo a proposta
 
-Esquema do Cenário: Navegação sobre os casos
+@wip
+Esquema do Cenário: Navegação sobre as propostas
   Dado existe um grupo que sou membro
-  E existe um caso "Meu Caso X"
+  E existe uma proposta "Proposta de Caso X"
   E estou na página <página>
   Quando eu clicar em <link>
   Então estou vendo <destino>
 
 Cenários:
-  |página            | link                   | destino           |
-  |do grupo          | "Casos"                | os casos do grupo |
-  |dos casos do grupo| "Voltar"               | o grupo           |
-  |dos casos do grupo| "Relatar um novo Caso" | o novo caso       |
-  |do caso           | "Voltar"               | os casos do grupo |
-  |de criar caso     | "Voltar"               | os casos do grupo |
-  |de edição do caso | "Voltar"               | os casos do grupo |
-  |de edição do caso | "Exibir"               | o caso            |
+  |página                | link                   | destino               |
+  |do grupo              | "Propostas"            | as propostas do grupo |
+  |das propostas do grupo| "Voltar"               | o grupo               |
+  |das propostas do grupo| "Nova proposta de Caso"| a nova proposta       |
+  |da proposta           | "Voltar"               | as propostas do grupo |
+  |de criar proposta     | "Voltar"               | as propostas do grupo |
+  |de edição da proposta | "Voltar"               | as propostas do grupo |
+  |de edição da proposta | "Exibir"               | a proposta            |
+
 
 Cenário: Como os casos do grupo são listados
   Dado existe um grupo que sou membro

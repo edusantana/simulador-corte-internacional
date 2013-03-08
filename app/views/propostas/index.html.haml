@@ -14,10 +14,12 @@
       %td= proposta.nome
       %td= proposta.assunto
       %td= proposta.descricao
-      %td= link_to t('Show'), grupo_proposta(@grupo, proposta)
+      %td= link_to t('Show'), grupo_proposta_path(@grupo, proposta)
       %td= link_to t('Edit'), edit_grupo_proposta_path(@grupo, proposta)
-      %td= link_to t('Destroy'), proposta, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to t('Destroy'), grupo_proposta_path(@grupo, proposta), :confirm => 'Are you sure?', :method => :delete
 
 %br
 
 = link_to 'Nova proposta de Caso', new_grupo_proposta_path(@grupo)
+\|
+= link_to t('Back'), grupo_path(@grupo)

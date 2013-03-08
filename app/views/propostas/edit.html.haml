@@ -2,6 +2,7 @@
 
 = render 'form'
 
-= link_to 'Show', @proposta
+
+= link_to t('Show'), grupo_proposta_path(@grupo, @proposta)
 \|
-= link_to 'Back', propostas_path
+= link_to t('Back'), grupo_propostas_path(@grupo)

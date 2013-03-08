@@ -14,6 +14,7 @@ class PropostasController < ApplicationController
   # GET /propostas/1
   # GET /propostas/1.json
   def show
+    @grupo = Grupo.find(params[:grupo_id])
     @proposta = Proposta.find(params[:id])
 
     respond_to do |format|
@@ -36,21 +37,23 @@ class PropostasController < ApplicationController
 
   # GET /propostas/1/edit
   def edit
+    @grupo = Grupo.find(params[:grupo_id])
     @proposta = Proposta.find(params[:id])
   end
 
   # POST /propostas
   # POST /propostas.json
   def create
-    @proposta = Proposta.new(params[:proposta])
-
+    @grupo = Grupo.find(params[:grupo_id])
+    @proposta = @grupo.propostas.build(params[:proposta])
+    
+    
     respond_to do |format|
       if @proposta.save
-        format.html { redirect_to @proposta, notice: 'Proposta was successfully created.' }
-        format.json { render json: @proposta, status: :created, location: @proposta }
+        current_user.add_role :proprositor, @proposta
+        format.html { redirect_to [@grupo, @proposta], notice: 'Proposta was successfully created.' }
       else
         format.html { render action: "new" }
-        format.json { render json: @proposta.errors, status: :unprocessable_entity }
       end
     end
   end

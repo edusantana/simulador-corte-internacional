@@ -10,6 +10,6 @@
   %b Descricao:
   = @proposta.descricao
 
-= link_to 'Edit', edit_proposta_path(@proposta)
+= link_to t('Edit'), edit_grupo_proposta_path(@grupo, @proposta)
 \|
-= link_to 'Back', propostas_path
+= link_to t('Back'), grupo_propostas_path(@grupo)

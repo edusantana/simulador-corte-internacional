@@ -15,5 +15,11 @@
   .field
     = f.label :descricao
     = f.text_area :descricao
+  .field
+    = f.label :anexo
+    = f.file_field :anexo
+    = f.hidden_field :anexo_cache
+    
+    
   .actions
-    = f.submit 'Save'
+    = f.submit t('Save')
