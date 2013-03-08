@@ -1,0 +1,19 @@
+= form_for ([@grupo, @proposta]) do |f|
+  -if @proposta.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@proposta.errors.count, "error")} prohibited this proposta from being saved:"
+      %ul
+        - @proposta.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :assunto
+    = f.text_field :assunto
+  .field
+    = f.label :descricao
+    = f.text_area :descricao
+  .actions
+    = f.submit 'Save'

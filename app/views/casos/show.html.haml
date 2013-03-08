@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @caso.nome
+%p
+  %b Assunto:
+  = @caso.assunto
+%p
+  %b Descricao:
+  = @caso.descricao
+
+= link_to t('Edit'), edit_grupo_caso_path(@grupo, @caso)
+\|
+= link_to t('Back'), grupo_casos_path(@grupo)

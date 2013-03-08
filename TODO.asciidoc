@@ -1,0 +1,5 @@
+TODO LIST
+=========
+
+
+- Add a gravatar: https://github.com/chrislloyd/gravtastic

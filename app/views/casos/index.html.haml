@@ -1,0 +1,25 @@
+%h1 Listing casos
+
+%table
+  %tr
+    %th Nome
+    %th Assunto
+    %th Descricao
+    %th
+    %th
+    %th
+
+  - @casos.each do |caso|
+    %tr
+      %td= caso.nome
+      %td= caso.assunto
+      %td= caso.descricao
+      %td= link_to t('Show'), grupo_caso_path(@grupo, caso)
+      %td= link_to t('Edit'), edit_grupo_caso_path(@grupo, caso), :id => "editar-caso-#{caso.id.to_s}"
+      %td= link_to t('Destroy'), grupo_caso_path(@grupo, caso), :confirm => 'Are you sure?', :method => :delete, :id => "excluir-caso-#{caso.id.to_s}"
+
+%br
+
+=link_to t('direito.novocaso'), new_grupo_caso_path(@grupo)
+\|
+=link_to t('Back'), grupo_path(@grupo)

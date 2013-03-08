@@ -1,0 +1,23 @@
+%h1 Listing propostas
+
+%table
+  %tr
+    %th Nome
+    %th Assunto
+    %th Descricao
+    %th
+    %th
+    %th
+
+  - @propostas.each do |proposta|
+    %tr
+      %td= proposta.nome
+      %td= proposta.assunto
+      %td= proposta.descricao
+      %td= link_to t('Show'), grupo_proposta(@grupo, proposta)
+      %td= link_to t('Edit'), edit_grupo_proposta_path(@grupo, proposta)
+      %td= link_to t('Destroy'), proposta, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'Nova proposta de Caso', new_grupo_proposta_path(@grupo)

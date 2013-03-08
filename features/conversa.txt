@@ -1,0 +1,100 @@
+-mesmo grupo de alunos
+-jogo interativo
+
+-cadastrar usuário
+--> administrador cadastrar usuários
+
+-- exposição geral do que é o sistema
+-- exposição geral do que é a corte
+-- exposição geral como usar o sistema
+
+-usuários
+
+--etapas do processo
+dentro da sala de aula
+
+Grupos
+	UFPB-Prática-Nome-do-professor(Maria Luiza)
+		- participantes
+		- participantes adicionam propostas de casos ao grupo (propositor)
+		- turmas
+			-turma-2031.1-manhã
+        - configuração de quantas simulações ocorrerão(3)
+          para cada simulação:
+            * escolher uma proposta de caso
+            * membros ingressarem nos papeis apropriados 
+              - criação e organização das pessoas na corte/peticionário/agent
+            * dar inicio a simulação (professor)
+              -> depois do inicio, apenas o dono ou moderados 
+                    pode mudar configuração dos integrantes.
+			-turma-2031.1-noite
+				- participantes escolhem processos para serem executados aqui
+			-turma-capacitação-esma
+	Capacitação
+		- outros participantes
+		- outras turmas de capacitação
+		- turmas
+			- turma-esma-manhã
+
+Grupos possuem
+	-responsaveis
+	-professor/avaliador
+
+Adição de processos
+	-responsável adiciona processo no grupo? ou
+	-alunos se reunem formam um grupo? e adicionam um processo?
+	-alunos se reunem formam um grupo e escolhe um processo?
+	-qualquer integrante recomendar novos processos
+	-se cadastram como desejam (acusação/defesa)
+
+Decisão sobre os integrantes reponsavel/professors
+	-dar inicio a fase inicial do processo
+	
+-Criterios
+	- argumentação escrita - avaliação/conceito
+		- redação
+		- argumentação
+		- dispositivos legais
+		- descrição do caso
+		- integração do grupo
+		= avaliação global
+	- argumentação oral
+		- oratória
+		- postura
+		- reverencia
+		- sustentação
+		- integração do grupo
+		= avaliação global
+
+Simulador do sistema interamericano de direitos humanos
+->siadh
+www.ccj.ufpb.br/siadh
+-> explanação sobre o programa
+--- o isso é para o ccs
+--- importancia
+--- historia sobre os direitos humanos, em que isso se insere
+
+-- historico das equipes, turmas que já passaram, resultado sobre o final de cada turma,
+  quem fez o quê, etc
+-- os casos que foram estudados
+-- organização do site: equipe do simulador, contatos
+
+-- apresentação do simulador
+-- link do simulador
+-- edital e contato para equipe de gestão, fotos? para saber como é o programa
+-- login, senha
+
+
+
+
+Entrando como visitante, tem acesso aos casos (passados?) e não
+altera nada.
+
+
+Na corte entra o caso e não a petição.
+Depois do caso submetido, podemos:
+  - ter intervenção do amigo da corte
+  - a corte recebe o caso e vai fazer as esseções de preemilinares
+  - Peticionários: comissão, defensor interamericano, estado
+  - amigo da corte: pode intervir dos dois lados
+

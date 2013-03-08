@@ -1,0 +1,12 @@
+pt-BR:
+  Save: "Salvar"
+  Back: "Voltar"
+  Edit: "Editar"
+  Show: "Exibir"
+  direito:
+    novaturma: "Nova Turma"
+    novocaso: "Relatar um novo Caso"
+  participacao:
+    pedido:
+      enviado: "Seu pedido de participação foi enviado."
+      aprovada: "O pedido de participação foi aprovado."

@@ -1,0 +1,19 @@
+= form_for ([@grupo, @caso]) do |f|
+  -if @caso.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@caso.errors.count, "error")} prohibited this caso from being saved:"
+      %ul
+        - @caso.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :assunto
+    = f.text_field :assunto
+  .field
+    = f.label :descricao
+    = f.text_area :descricao
+  .actions
+    = f.submit t('Save')

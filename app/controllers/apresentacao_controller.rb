@@ -1,0 +1,2 @@
+class ApresentacaoController < ApplicationController
+end

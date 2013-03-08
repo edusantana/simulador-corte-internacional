@@ -1,0 +1,13 @@
+= form_for @grupo do |f|
+  -if @grupo.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@grupo.errors.count, "error")} prohibited this grupo from being saved:"
+      %ul
+        - @grupo.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .actions
+    = f.submit 'Salvar'

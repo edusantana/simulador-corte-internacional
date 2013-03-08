@@ -1,0 +1,30 @@
+%p#notice= notice
+
+
+-if !@grupo.participacoes_pendentes.empty? and can? :manage_participacao, @grupo
+  %p.pedidos 'Pedidos de participatção pendentes'
+  - @grupo.participacoes_pendentes.each do |user|
+    %p
+      = user.email 
+      = user.id
+      = @grupo.id
+      = "aprovar-#{user.email}"
+      = "reprovar-#{user.email}"
+      = link_to image_tag("aprovar.png"),   aprovar_participacao_path(@grupo.id, user.id), :id =>  "aprovar-participacao-#{@grupo.id.to_s}-#{user.id.to_s}", :method => :get, :title => 'Aprovar'
+      = link_to image_tag("reprovar.png"), reprovar_participacao_path(@grupo.id, user.id), :id => "reprovar-participacao-#{@grupo.id.to_s}-#{user.id.to_s}", :method => :get, :title => 'Reprovar'
+
+
+-if can? :manage_turmas, @grupo
+  %p
+    = link_to 'Criar Turma',   new_grupo_turma_path(@grupo.id), :id =>  "criar-turma", :method => :get, :title => 'Criar'
+
+%p
+  %b Nome:
+  = @grupo.nome
+
+
+= link_to t('Casos'), grupo_casos_path(@grupo)
+\|
+= link_to t('Edit'), edit_grupo_path(@grupo)
+\|
+= link_to t('Back'), grupos_path

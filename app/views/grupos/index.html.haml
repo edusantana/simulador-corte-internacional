@@ -1,0 +1,23 @@
+%h1 Listing grupos
+
+%table
+  %tr
+    %th Nome
+    %th Dono
+    %th
+    %th
+    %th
+
+  - @grupos.each do |grupo|
+    %tr
+      %td= grupo.nome      
+      
+      %td= link_to 'Participar', participar_grupo_path(grupo), :id => 'participar-grupo-'+grupo.id.to_s
+      %td= link_to 'Show', grupo
+      %td= link_to 'Edit', edit_grupo_path(grupo)
+      %td= link_to 'Destroy', grupo, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to image_tag("excluir.png") , grupo, confirm: 'Você tem certeza que deseja excluir?', method: :delete, :id => 'excluir-grupo-'+grupo.id.to_s, :title => 'Excluir'
+
+%br
+
+= link_to 'Criar Grupo', new_grupo_path

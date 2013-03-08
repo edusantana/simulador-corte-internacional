@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @proposta.nome
+%p
+  %b Assunto:
+  = @proposta.assunto
+%p
+  %b Descricao:
+  = @proposta.descricao
+
+= link_to 'Edit', edit_proposta_path(@proposta)
+\|
+= link_to 'Back', propostas_path

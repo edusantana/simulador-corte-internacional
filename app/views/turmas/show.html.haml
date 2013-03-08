@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @turma.nome
+
+= link_to t('Edit'), edit_grupo_turma_path(@grupo, @turma)
+\|
+= link_to t('Back'), grupo_turmas_path(@grupo)

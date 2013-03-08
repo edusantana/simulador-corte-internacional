@@ -1,0 +1,23 @@
+%h1 Listing turmas
+
+%table
+  %tr
+    %th Nome
+    %th
+    %th
+    %th
+
+  - @turmas.each do |turma|
+    %tr
+      %td= turma.nome
+      %td= link_to t('Show'), grupo_turma_path(@grupo, turma)
+      -if can? :manage_participacao, @grupo
+        %td= link_to t('Edit'), edit_grupo_turma_path(@grupo, turma)
+        %td= link_to t('Destroy'), grupo_turma_path(@grupo, turma), :confirm => 'Are you sure?', :method => :delete, :id => "excluir-grupo-turma-#{@grupo.id.to_s}-#{turma.id.to_s}"
+
+%br
+
+-if can? :manage_participacao, @grupo
+  =link_to 'Criar Turma',   new_grupo_turma_path(@grupo.id), :id =>  "criar-turma", :method => :get, :title => 'Criar'
+\|
+=link_to t('Back'), grupo_path(@grupo)

@@ -1,0 +1,172 @@
+REGULAMENTO DA CORTE INTERAMERICANA DE DIREITOS HUMANOS - 2010
+
+
+Legenda:
+ña: não se aplica
+id: implementado diferenciado
+ni: não será implementado
+
+
+DISPOSIÇÕES PRELIMINARES (ña)
+  Artigo 1. Objetivo
+  Artigo 2. Definições
+
+TÍTULO I - DA ORGANIZAÇÃO E DO FUNCIONAMENTO DA CORTE
+  Capítulo I-DA PRESIDÊNCIA E DA VICE-PRESIDÊNCIA
+    Artigo 3. Eleição da Presidência e da Vice-presidência(id)
+      1-2
+      id: a eleição será feita com os juizes, durante a formação da corte
+    Artigo 4. Atribuições da Presidência (ña, id)
+      1:a-f, 2 (ña)
+      1e(id): o presidente deverá escrever e enviar um relatório ao final do processo.
+    Artigo 5. Atribuições da Vice-presidência(ni)
+      1-2
+    Artigo 6. Comissões(ni)
+      1-3
+
+  Capítulo II-DA SECRETARIA(ni)
+    Artigo 7. Eleição do Secretário
+      1-2
+    Artigo 8. Secretário Adjunto
+      1-3
+    Artigo 9. Juramento
+      1-3
+    Artigo 10. Atribuições do Secretário
+      a-j
+
+  Capítulo III - DO FUNCIONAMENTO DA CORTE(ña)
+    Artigo 11. Sessões ordinárias
+    Artigo 12. Sessões extraordinárias
+    Artigo 13. Sessões fora da sede
+    Artigo 14. Quórum
+    Artigo 15. Audiências, deliberações e decisões
+      1-4
+    Artigo 16. Decisões e votações
+      1-4
+    Artigo 17. Continuidade das funções dos Juízes
+      1-3
+    Artigo 18. Juízes interinos
+    Artigo 19. Juízes nacionais
+      1-2
+    Artigo 20. Juízes ad hoc em casos inter-estatais
+      1-6
+    Artigo 21. Impedimentos, escusas e inabilitação
+      1-3
+
+TÍTULO II - DO PROCESSO
+  Capítulo I - REGRAS GERAIS
+    Artigo 22. Idiomas oficiais
+      1-5 [idioma é o pt]
+    Artigo 23. Representação dos Estados
+      1-3
+    Artigo 24. Representação da Comissão
+    Artigo 25. Participação das supostas vítimas ou seus representantes
+      1-3
+    Artigo 26. Cooperação dos Estados
+      1-3
+    Artigo 27. Medidas provisórias
+      1-10
+    Artigo 28. Apresentação de escritos
+      1-4    Artigo 26. Cooperação dos Estados
+    Artigo 29. Procedimento por não comparecimento ou falta de atuação
+      1-2
+    Artigo 30. Acúmulo de casos e de autos
+      1-5
+    Artigo 31. Resoluções
+      1-3
+    Artigo 32. Publicação das sentenças e outras decisões
+      1:a-d, 2-3
+    Artigo 33. Transmissão de escritos
+
+  Capítulo II - PROCEDIMENTO ESCRITO
+    Artigo 34. Início do processo
+    Artigo 35. Submissão do caso pela Comissão
+      1:a-g, 2-3
+    Artigo 36. Submissão de um caso por um Estado
+      1:a-f, 2
+    Artigo 37. Defensor Interamericano
+    Artigo 38. Exame preliminar da submissão do caso
+    Artigo 39. Notificação do caso
+      1:a-d, 2-5
+    Artigo 40. Escrito de petições, argumentos e prova
+      1, 2:a-d
+    Artigo 41. Contestação do Estado
+      1:a-d, 2-3
+    Artigo 42. Exceções preliminares
+      1-6
+    Artigo 43. Outros atos do procedimento escrito
+    Artigo 44. Apresentação de amicus curiae
+      1-4
+
+  Capítulo III - PROCEDIMENTO ORAL
+    ## não se aplica ao sistema
+    Artigo 45. Abertura
+    Artigo 46. Lista definitiva de declarantes
+      1-2
+    Artigo 47. Impugnação de testemunhas
+      1-2
+    Artigo 48. Recusa de peritos
+      1:a-f, 2-3
+    Artigo 49. Substituição de declarantes oferecidos
+    Artigo 50. Oferecimento, citação e comparecimento de declarantes
+      1-6
+    Artigo 51. Audiência
+      1-11
+    Artigo 52. Perguntas durante os debates
+      1-4
+    Artigo 53. Proteção de supostas vítimas, testemunhas, peritos, representantes e assessores legais
+    Artigo 54. Não comparecimento ou falso testemunho
+    Artigo 55. Atas das audiências
+      1:a-c, 2-3
+
+  Capítulo IV - DO PROCEDIMENTO FINAL ESCRITO
+    Artigo 56. Alegações finais escritas
+      1-2
+
+  Capítulo V - DA PROVA
+    Artigo 57. Admissão
+      1-2
+    Artigo 58. Diligências probatórias de ofício
+      a-e
+    Artigo 59. Prova incompleta ou ilegível
+    Artigo 60. Gastos da prova
+
+  Capítulo VI - DESISTÊNCIA, RECONHECIMENTO E SOLUÇÃO AMISTOSA
+    Artigo 61. Desistência do caso
+    Artigo 62. Reconhecimento
+    Artigo 63. Solução amistosa
+    Artigo 64. Prosseguimento do exame do caso
+
+  Capítulo VII - DAS SENTENÇAS
+    Artigo 65. Conteúdo das sentenças
+      1:a-j, 2
+    Artigo 66. Sentença de reparações e custas
+      1-2
+    Artigo 67. Pronunciamento e comunicação da sentença
+      1-6
+    Artigo 68. Pedido de interpretação
+      1-5
+    Artigo 69. Supervisão de cumprimento de sentenças e outras decisões do Tribunal
+      1-5
+
+TÍTULO III - DOS PARECERES CONSULTIVOS
+  Artigo 70. Interpretação da Convenção
+    1-3
+  Artigo 71. Interpretação de outros tratados
+    1-2
+  Artigo 72. Interpretação de leis internas
+    1:a-c, 2
+  Artigo 73. Procedimento
+    1-4
+  Artigo 74. Aplicação analógica
+  Artigo 75. Emissão e conteúdo dos pareceres consultivos
+    1-2, 3:a-f, 4    
+
+TÍTULO IV - RETIFICAÇÃO DE ERROS
+  Artigo 76. Retificação de erros em sentenças e outras decisões
+
+TÍTULO V - DISPOSIÇÕES FINAIS E TRANSITÓRIAS
+  Artigo 77. Reformas ao Regulamento
+  Artigo 78. Entrada em vigor
+  Artigo 79. Aplicação
+    1-2
