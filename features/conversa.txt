@@ -98,3 +98,5 @@ Depois do caso submetido, podemos:
   - Peticionários: comissão, defensor interamericano, estado
   - amigo da corte: pode intervir dos dois lados
 
+
+rails_best_practices???
