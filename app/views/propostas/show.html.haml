@@ -10,13 +10,14 @@
   %b Descricao:
   = @proposta.descricao
 
-%p.propositor
+%p#propositor
   %b Propositor:
-  = link_to image_tag('baixar-documento.png'), @proposta.anexo.url
+  = image_tag lavatar_url(@proposta.propositor), :alt =>@proposta.propositor.email 
+  = @proposta.propositor.email
 
 %p
   %b Anexo:
-  = link_to image_tag('baixar-documento.png'), @proposta.anexo.url
+  = link_to image_tag('baixar-documento.png'), @proposta.anexo.url, :id=>'anexo'
 
 
 = link_to t('Edit'), edit_grupo_proposta_path(@grupo, @proposta)
