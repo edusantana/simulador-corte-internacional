@@ -28,6 +28,7 @@ class PropostasController < ApplicationController
   def new
     @grupo = Grupo.find(params[:grupo_id])
     @proposta = @grupo.propostas.build
+    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,11 +47,11 @@ class PropostasController < ApplicationController
   def create
     @grupo = Grupo.find(params[:grupo_id])
     @proposta = @grupo.propostas.build(params[:proposta])
+    @proposta.propositor = current_user
     
     
     respond_to do |format|
       if @proposta.save
-        current_user.add_role :proprositor, @proposta
         format.html { redirect_to [@grupo, @proposta], notice: 'Proposta was successfully created.' }
       else
         format.html { render action: "new" }

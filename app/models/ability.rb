@@ -23,7 +23,7 @@ class Ability
     #
     #   can :update, Article, :published => true
     #
-    # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    # See the wiki for details: https:Project//github.com/ryanb/cancan/wiki/Defining-Abilities
     # https://github.com/EppO/rolify/wiki/Tutorial
     
     can :manage, Grupo, :id => Grupo.with_role(:owner, user).map{ |grupo| grupo.id }
@@ -31,6 +31,10 @@ class Ability
     can :create, Grupo
     can :solicitar_participacao, Grupo
     can :read, Grupo, :id => Grupo.with_role(:member, user).map{ |grupo| grupo.id }
+    can :destroy, Proposta, :propositor_id => user.id
+    can :destroy, Proposta, :grupo_id => Grupo.with_role(:owner, user).map{ |grupo| grupo.id }
+    #can :update,  Proposta, :propositor_id => user.id
+    
     
   end
 end

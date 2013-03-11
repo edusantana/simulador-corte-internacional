@@ -25,16 +25,18 @@ Dado /^estou na página de edição da proposta$/ do
 end
 
 # ----------------- >>>>    FACTORY
-Dado /^existe um caso "(.*?)"$/ do |nome|
-  pending
-  @caso = FactoryGirl.create(:caso, :nome => nome, :grupo => @grupo)
-  @user.add_role :relator, @caso
-end
 
 Dado /^existe uma proposta "(.*?)"$/ do |nome|
-  @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo)
-  @user.add_role :proprositor, @proposta
+  @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo, :propositor => @user)
+end
 
+Dado /^existe uma proposta "(.*?)" que sou propositor$/ do |nome|
+  @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo, :propositor => @user)
+end
+
+Dado /^existe uma proposta "(.*?)" que não sou propositor$/ do |nome|
+  propositor = FactoryGirl.create(:user)
+  @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo, :propositor => propositor)
 end
 
 
@@ -75,7 +77,9 @@ Então /^estou vendo as propostas do grupo$/ do
 end
 
 Então /^estou vendo o anexo da proposta$/ do
-  page.should have_content @proposta.anexo.identifier
+  find("#anexo").visible?.should be_true
+  # find("#anexo").should have_content @proposta.anexo.identifier
+  # page.should have_content @proposta.anexo.identifier
 end
 
 
@@ -90,10 +94,19 @@ Então /^estou vendo a nova proposta$/ do
 end
 
 Então /^estou vendo o proprositor$/ do
-  pending
-  page.should have_content @proposta.nome
+  page.should have_content @proposta.propositor.email
+  find("#propositor").should have_content @proposta.propositor.email
 end
 
+Então /^posso excluir a proposta$/ do
+  link_excluir_id = "excluir-proposta-#{@proposta.id.to_s}"
+  page.should have_selector('#'+link_excluir_id)
+end
+
+Então /^não posso excluir a proposta$/ do
+  link_excluir_id = "excluir-proposta-#{@proposta.id.to_s}"
+  page.should_not have_selector('#'+link_excluir_id)
+end
 
 
 Então /^um caso "(.*?)" foi criado$/ do |nome|

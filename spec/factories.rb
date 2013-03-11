@@ -19,7 +19,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email { :user_email }
+    email { generate(:user_email) }
     password 'password'
   end
    
@@ -45,7 +45,7 @@ FactoryGirl.define do
     assunto 'Assunto do caso'
     descricao 'Descricao do caso'
     anexo { File.open(File.join(Rails.root, 'test','integration','resources','proposta.zip')) }
-    
+    # propositor
   end
 
 end

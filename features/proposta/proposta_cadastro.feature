@@ -18,7 +18,7 @@ Contexto:
   E estou logado como "eu@mail.com"
 
 
-Cenário: Propondo um novo caso
+Cenário: Criando uma proposta de caso
   Dado existe um grupo que sou membro
   E estou na página das propostas de caso do grupo
   Quando eu clicar em "Nova proposta de Caso"
@@ -54,7 +54,7 @@ Cenário: Como as propostas dos grupos são listadas
   E estou na página das propostas do grupo
   Então estou vendo "Proposta de Caso X"
 
-@wip
+
 Cenário: Como uma proposta é exibida
   Dado existe um grupo que sou membro
   E existe uma proposta "Proposta de Caso X"
@@ -64,6 +64,20 @@ Cenário: Como uma proposta é exibida
   E estou vendo "Proposta de Caso X"
   E estou vendo o proprositor
   E estou vendo o anexo da proposta
+
+
+@wip
+Esquema do Cenário: Permissão de exclusão de propostas
+  Dado existe um grupo que sou <participacao>
+  E existe uma proposta "Proposta de Caso X" que <propositor> propositor
+  E estou na página das propostas do grupo
+  Então <permissao> excluir a proposta
+
+Cenários:
+  |participacao | propositor| permissao |
+  | dono        | sou       | posso     |
+  | membro      | não sou   | não posso |
+  | dono        | não sou   | posso     |
 
 
 

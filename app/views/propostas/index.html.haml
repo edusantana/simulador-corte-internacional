@@ -12,7 +12,7 @@
       %td= link_to proposta.nome, grupo_proposta_path(@grupo, proposta)
       %td= proposta.assunto
       %td= link_to t('Edit'), edit_grupo_proposta_path(@grupo, proposta)
-      %td= link_to t('Destroy'), grupo_proposta_path(@grupo, proposta), :confirm => 'Are you sure?', :method => :delete
+      %td= link_to_if ( can? :destroy, proposta), t('Destroy'), grupo_proposta_path(@grupo, proposta), :confirm => 'Are you sure?', :method => :delete, :id => "excluir-proposta-#{proposta.id.to_s}"
 
 %br
 
