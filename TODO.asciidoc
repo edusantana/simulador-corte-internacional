@@ -2,4 +2,4 @@ TODO LIST
 =========
 
 
-- Add a gravatar: https://github.com/chrislloyd/gravtastic
+- Add a gravatar: https://github.com/chrislloyd/gravtastic - done!
