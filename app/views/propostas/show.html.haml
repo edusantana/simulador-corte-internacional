@@ -10,6 +10,15 @@
   %b Descricao:
   = @proposta.descricao
 
+%p.propositor
+  %b Propositor:
+  = link_to image_tag('baixar-documento.png'), @proposta.anexo.url
+
+%p
+  %b Anexo:
+  = link_to image_tag('baixar-documento.png'), @proposta.anexo.url
+
+
 = link_to t('Edit'), edit_grupo_proposta_path(@grupo, @proposta)
 \|
 = link_to t('Back'), grupo_propostas_path(@grupo)

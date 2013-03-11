@@ -26,7 +26,7 @@ end
 
 # ----------------- >>>>    FACTORY
 Dado /^existe um caso "(.*?)"$/ do |nome|
-  peding
+  pending
   @caso = FactoryGirl.create(:caso, :nome => nome, :grupo => @grupo)
   @user.add_role :relator, @caso
 end
@@ -74,6 +74,11 @@ Então /^estou vendo as propostas do grupo$/ do
   page.should have_content @proposta.nome
 end
 
+Então /^estou vendo o anexo da proposta$/ do
+  page.should have_content @proposta.anexo.identifier
+end
+
+
 
 Então /^estou vendo a proposta$/ do
   current_path.should == grupo_proposta_path(@grupo, @proposta)
@@ -83,6 +88,12 @@ end
 Então /^estou vendo a nova proposta$/ do
   current_path.should == new_grupo_proposta_path(@grupo)
 end
+
+Então /^estou vendo o proprositor$/ do
+  pending
+  page.should have_content @proposta.nome
+end
+
 
 
 Então /^um caso "(.*?)" foi criado$/ do |nome|

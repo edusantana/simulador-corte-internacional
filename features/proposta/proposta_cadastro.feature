@@ -31,7 +31,6 @@ Cenário: Propondo um novo caso
   E sou o proprositor da proposta
   E estou vendo a proposta
 
-@wip
 Esquema do Cenário: Navegação sobre as propostas
   Dado existe um grupo que sou membro
   E existe uma proposta "Proposta de Caso X"
@@ -49,12 +48,24 @@ Cenários:
   |de edição da proposta | "Voltar"               | as propostas do grupo |
   |de edição da proposta | "Exibir"               | a proposta            |
 
-
-Cenário: Como os casos do grupo são listados
+Cenário: Como as propostas dos grupos são listadas
   Dado existe um grupo que sou membro
-  E existe um caso "Meu Caso X"
-  E estou na página dos casos do grupo
-  Então estou vendo "Meu Caso X"
+  E existe uma proposta "Proposta de Caso X"
+  E estou na página das propostas do grupo
+  Então estou vendo "Proposta de Caso X"
+
+@wip
+Cenário: Como uma proposta é exibida
+  Dado existe um grupo que sou membro
+  E existe uma proposta "Proposta de Caso X"
+  E estou na página das propostas do grupo
+  Quando eu clicar em "Proposta de Caso X"
+  Então estou vendo a proposta
+  E estou vendo "Proposta de Caso X"
+  E estou vendo o proprositor
+  E estou vendo o anexo da proposta
+
+
 
 Cenário: Excluindo um caso relatado
   Dado existe um grupo que sou membro
