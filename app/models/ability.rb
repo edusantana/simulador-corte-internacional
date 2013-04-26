@@ -31,8 +31,8 @@ class Ability
     can :create, Grupo
     can :solicitar_participacao, Grupo
     can :read, Grupo, :id => Grupo.with_role(:member, user).map{ |grupo| grupo.id }
-    can :destroy, Proposta, :propositor_id => user.id
-    can :destroy, Proposta, :grupo_id => Grupo.with_role(:owner, user).map{ |grupo| grupo.id }
+    #can :destroy, Proposta, :propositor_id => user.id
+    can :manage,  Proposta, :grupo_id => Grupo.with_role(:owner, user).map{ |grupo| grupo.id }
     #can :update,  Proposta, :propositor_id => user.id
     
     

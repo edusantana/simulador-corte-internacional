@@ -62,15 +62,14 @@ class PropostasController < ApplicationController
   # PUT /propostas/1
   # PUT /propostas/1.json
   def update
+    @grupo = Grupo.find(params[:grupo_id])
     @proposta = Proposta.find(params[:id])
 
     respond_to do |format|
       if @proposta.update_attributes(params[:proposta])
-        format.html { redirect_to @proposta, notice: 'Proposta was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to [@grupo, @proposta], notice: 'Proposta was successfully updated.' }
       else
         format.html { render action: "edit" }
-        format.json { render json: @proposta.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -78,12 +77,14 @@ class PropostasController < ApplicationController
   # DELETE /propostas/1
   # DELETE /propostas/1.json
   def destroy
+    @grupo = Grupo.find(params[:grupo_id])
     @proposta = Proposta.find(params[:id])
+    authorize! :destroy, @proposta
+    
     @proposta.destroy
 
     respond_to do |format|
-      format.html { redirect_to propostas_url }
-      format.json { head :no_content }
+      format.html { redirect_to grupo_propostas_path(@grupo) }
     end
   end
 end

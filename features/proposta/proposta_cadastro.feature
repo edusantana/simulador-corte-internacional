@@ -17,7 +17,6 @@ Contexto:
   |ele@mail.como            |password|false|
   E estou logado como "eu@mail.com"
 
-
 Cenário: Criando uma proposta de caso
   Dado existe um grupo que sou membro
   E estou na página das propostas de caso do grupo
@@ -71,35 +70,19 @@ Esquema do Cenário: Permissão de exclusão de propostas
   Dado existe um grupo que sou <participacao>
   E existe uma proposta "Proposta de Caso X" que <propositor> propositor
   E estou na página das propostas do grupo
-  Então <permissao> excluir a proposta
+  Então <permissao> <ação> a proposta
+  Quando eu tentar <ação> a proposta
+  Então a proposta <resultado>
 
 Cenários:
-  |participacao | propositor| permissao |
-  | dono        | sou       | posso     |
-  | membro      | não sou   | não posso |
-  | dono        | não sou   | posso     |
+  |participacao | propositor| permissao | ação    | resultado        |
+  | dono        | sou       | posso     | excluir | foi excluída     |
+  | membro      | não sou   | não posso | excluir | não foi excluída |
+  | dono        | não sou   | posso     | excluir | foi excluída     |
+  | dono        | sou       | posso     | editar  | foi editada      |
+  | membro      | não sou   | não posso | editar  | não foi editada  |
+  | dono        | não sou   | posso     | editar  | foi editada      |
 
 
-
-Cenário: Excluindo um caso relatado
-  Dado existe um grupo que sou membro
-  E existe um caso "Meu Caso X"
-  E estou na página dos casos do grupo
-  Quando tentar excluir o caso
-  Então o caso foi excluído
-
-Cenário: Editando um caso relatado
-  Dado existe um grupo que sou membro
-  E existe um caso "Meu Caso X"
-  E estou na página dos casos do grupo
-  Quando eu clicar para editar o caso
-  E eu preencher "Nome" com "Novo nome"
-  E eu preencher "Assunto" com "Novo Assunto"
-  E eu preencher "Descricao" com "Nova Descrição"
-  E clicar em salvar
-  Então estou vendo o caso
-  E o caso foi atualizado:
-  |Nome       |Assunto       |Descricao     |
-  |Novo nome  |Novo Assunto  |Nova Descrição|
 
 

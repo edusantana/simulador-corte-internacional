@@ -23,7 +23,8 @@ Grupos
           para cada simulação:
             * escolher uma proposta de caso
             * membros ingressarem nos papeis apropriados 
-              - criação e organização das pessoas na corte/peticionário/agent
+              - criação e organização das pessoas na corte/peticionário/agente
+                  eles escolhem quais papeis.
             * dar inicio a simulação (professor)
               -> depois do inicio, apenas o dono ou moderados 
                     pode mudar configuração dos integrantes.

@@ -57,6 +57,29 @@ Quando /^anexar o documento do caso$/ do
   attach_file('Anexo', 'test/integration/resources/proposta.zip')
 end
 
+Quando /^eu tentar excluir a proposta$/ do
+  ability = Ability.new(@user)
+  if ability.can? :destroy, @proposta
+    link_excluir_id = "excluir-proposta-#{@proposta.id.to_s}"
+    click_on(link_excluir_id)
+  end
+end
+
+Quando /^eu tentar editar a proposta$/ do
+  @novo_nome = "Novo nome da proposta"
+
+  ability = Ability.new(@user)
+  if ability.can? :update, @proposta
+    link = "editar-proposta-#{@proposta.id.to_s}"
+    
+    click_on(link)
+    fill_in 'Nome', :with => @novo_nome
+    click_on('Save')
+
+    
+  end
+
+end
 
 
 #########################################################################
@@ -108,14 +131,28 @@ Então /^não posso excluir a proposta$/ do
   page.should_not have_selector('#'+link_excluir_id)
 end
 
+Então /^posso editar a proposta$/ do
+  link = "editar-proposta-#{@proposta.id.to_s}"
+  page.should have_selector('#'+link)
+end
+
+Então /^não posso editar a proposta$/ do
+  link = "editar-proposta-#{@proposta.id.to_s}"
+  page.should_not have_selector('#'+link)
+end
+
 
 Então /^um caso "(.*?)" foi criado$/ do |nome|
   @caso = Caso.find_by_nome nome
   @caso.id.should_not be_nil
 end
 
-Então /^o caso foi excluído$/ do
-  Caso.exists?(@caso.id).should be_false
+Então /^a proposta foi excluída$/ do
+  Proposta.exists?(@proposta.id).should be_false
+end
+
+Então /^a proposta não foi excluída$/ do
+  Proposta.exists?(@proposta.id).should be_true
 end
 
 
@@ -126,7 +163,7 @@ end
 Então /^sou o proprositor da proposta$/ do
   @user.reload
   @proposta.reload
-  @user.has_role?(:proprositor, @proposta).should be_true
+  (@proposta.propositor == @user).should be_true
 end
 
 Então /^a proposta de caso "(.*?)" foi criada$/ do |nome|
@@ -147,7 +184,15 @@ Então /^o caso foi atualizado:$/ do |table|
   end
 end
 
+Então /^a proposta foi editada$/ do
+  @proposta.reload
+  @proposta.nome.should == @novo_nome
+end
 
+Então /^a proposta não foi editada$/ do
+  @proposta.reload
+  @proposta.nome.should_not == @novo_nome
+end
 ######### Pendentes
 
 

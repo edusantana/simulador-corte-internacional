@@ -7,6 +7,8 @@ Dado /^que existe os seguintes usuários:$/ do |table|
     #papel_no_curso = attributes['papel_no_curso']
     #attributes.delete('papel_no_curso')
 
+		
+		attributes['password']="password"
     @user = User.create!(attributes)
 
     if admin 
