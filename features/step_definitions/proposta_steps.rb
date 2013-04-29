@@ -26,9 +26,10 @@ end
 
 # ----------------- >>>>    FACTORY
 
-Dado /^existe uma proposta "(.*?)"$/ do |nome|
+Dado /^existe uma proposta (de caso )?"(.*?)"$/ do |_,nome|
   @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo, :propositor => @user)
 end
+
 
 Dado /^existe uma proposta "(.*?)" que sou propositor$/ do |nome|
   @proposta = FactoryGirl.create(:proposta, :nome => nome, :grupo => @grupo, :propositor => @user)

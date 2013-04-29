@@ -48,4 +48,11 @@ FactoryGirl.define do
     # propositor
   end
 
+  factory :simulacao do
+    turma
+    proposta
+  end
+
+
+
 end

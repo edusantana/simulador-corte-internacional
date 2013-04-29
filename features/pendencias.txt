@@ -1,0 +1,22 @@
+Pendencias
+
+-uma máquina virtual com o ubuntu server
+-um domínio para a máquina (siadh.ccj.ufpb.br)
+-página (ccj.ufpb.br/siadh.html)
+
+
+Passos:
+- Solicitar ao ccj, solicitarem ao NTI a criação de uma máquina virtual
+ubuntu server, para execução de um simulador de corte. Solicitar a criação 
+do domínio também.
+
+- O nti deverá criar a máquina e o domínio, informando o usuário e senha
+para acessar a máquina.
+
+- Solicitar a quem gerencia o site do ccj, incluir uma seção/página para o
+simulador. Esta página, poderá ser edita por felipe ou deverá ser editada
+por quem gerencia o site, neste caso, ao solicitar a criação já enviar o
+conteúdo da que ele mesmo possa criar.
+
+Na página, em algum lugar será adicionado o link 'http://siadh.ccj.ufpb.br'
+

@@ -1,5 +1,8 @@
 Direito::Application.routes.draw do
 
+  resources :simulacoes, :only => [:show]
+
+
   resources :grupos do
     get 'participar', :on => :member
     resources :turmas
@@ -9,6 +12,8 @@ Direito::Application.routes.draw do
 
   get 'grupos/:id/aprovar/:user_id',  to: 'grupos#aprovar',   as: 'aprovar_participacao'
   get 'grupos/:id/reprovar/:user_id', to: 'grupos#reprovar',  as: 'reprovar_participacao'
+
+
 
 
   devise_for :users

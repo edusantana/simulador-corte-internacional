@@ -11,6 +11,18 @@ Dado /^existe uma turma no grupo$/ do
   @turma.id.should_not be_nil
 end
 
+Dado /^existe uma turma com todos estes alunos$/ do
+
+  @turma = FactoryGirl.create(:turma, :grupo=>@grupo)
+  @turma.add_aluno(User.all)
+
+  User.all do |aluno|
+    @turma.alunos.exists?(aluno).should be_true
+  end
+
+end
+
+
 
 # 2-Quando - Quando - Quando - Quando - Quando - Quando - Quando - Quando
 

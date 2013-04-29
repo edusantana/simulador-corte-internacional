@@ -20,6 +20,14 @@ Dado /^existe um grupo que sou dono$/ do
   @user.add_role :owner, @grupo
 end
 
+Dado /^existe um grupo com todos estes usuários$/ do
+  @grupo = FactoryGirl.create(:grupo)
+  User.all do |user|
+    user.add_role :member, @grupo
+  end
+end
+
+
 Dado /^existe um grupo que sou membro$/ do
   @grupo = FactoryGirl.create(:grupo)
   @user.add_role :member, @grupo
