@@ -42,7 +42,20 @@ Contexto:
   |professor@mail.com        | professor |
   |visitante@mail.com        |  |
 
-@wip @simulação
+@simulação
+Esquema do Cenário: Caso não iniciado
+	E estou logado como "<usuário>"
+	E estou na página da simulação
+	Então estou vendo "Equipe"
+	E estou vendo "Este caso ainda não foi iniciado."
+
+Cenários: 
+  |usuário                  |
+  |peticionario1@mail.com   |
+
+
+
+@simulação
 Esquema do Cenário: Iniciando a simulação
 	Dado simulação foi iniciada
 	E estou logado como "<usuário>"
@@ -51,11 +64,60 @@ Esquema do Cenário: Iniciando a simulação
 	E estou vendo "Proposta do caso"
 	E estou vendo "Aguardando submissão da petição."
 	E estou vendo "Aguardando notificação."
+	E estou vendo "Aguardando peticionários submeterem a petição inicial."
 
-@simulação
 Cenários: 
   |usuário                  |
   |peticionario1@mail.com   |
 
 
+@simulação
+Esquema do Cenário: Enviando a petição e provas
+	Dado simulação foi iniciada
+	E estou logado como "<usuário>"
+	E estou na página da simulação
+	Quando selecionar a petição para enviar
+  E clicar em "Submeter petição"
+  Então estou vendo a página da simulação
+  E ainda falta enviar as provas
+	Quando selecionar as provas para enviar
+  E clicar em "Submeter provas"
+  Então estou vendo a etapa Exame de Preliminar
+
+Cenários: 
+  |usuário                  |
+  |peticionario1@mail.com   |
+
+
+@wip @simulação
+Esquema do Cenário: Permissão de envio de petição
+	Dado simulação foi iniciada
+	E estou logado como "<usuário>"
+	E estou na página da simulação
+	Então <permissão> submeter petição
+
+Cenários: 
+  |usuário                  |permissão|
+  |peticionario1@mail.com   |posso|
+  |peticionario2@mail.com   |posso|
+  |agente1@mail.com         |não posso|
+  |juiz1@mail.com           |não posso|
+	|amicus_curiae1@mail.com  |não posso|
+	|visitante@mail.com  		  |não posso|
+
+
+
+@simulação
+Esquema do Cenário: Abrindo petição e provas enviadas
+	Dado simulação na etapa Exame de Preliminar
+	E estou logado como "<usuário>"
+	E estou na página da simulação
+	Quando eu clicar em "Petição"
+  Então estou baixando a petição do caso
+
+Cenários: 
+  |usuário                  |
+  |peticionario1@mail.com   |
+  |agente1@mail.com   |
+  |juiz1@mail.com   |
 

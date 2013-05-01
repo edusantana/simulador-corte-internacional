@@ -1,6 +1,9 @@
 Direito::Application.routes.draw do
 
-  resources :simulacoes, :only => [:show]
+  resources :simulacoes, :only => [:show] do 
+    post 'upload_peticao', :on => :member
+    post 'upload_provas', :on => :member
+  end
 
 
   resources :grupos do

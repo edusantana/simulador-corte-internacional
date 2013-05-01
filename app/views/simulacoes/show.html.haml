@@ -3,3 +3,36 @@
 %p
   Equipe
   Proposta do caso
+  = @caso.estado
+
+-if @caso.estado == Caso::ESTADO[:nao_iniciado]
+  %p
+    Este caso ainda não foi iniciado.
+-else
+  .peticionario
+    %p
+      Peticionário aqui!
+    -if @caso.estado == Caso::ESTADO[:aguardando_peticao]
+      %p
+        Aguardando submissão da petição.
+      = form_tag({:action => :upload_peticao}, :multipart => true) do
+        = file_field_tag 'peticao'
+        = submit_tag("Submeter petição")
+      = form_tag({:action => :upload_provas}, :multipart => true) do
+        = file_field_tag 'provas'
+        = submit_tag("Submeter provas")
+
+    -if @caso.estado >= Caso::ESTADO[:exame_preliminar]
+      =  link_to 'Petição', @caso.peticao.url   
+  .agente
+    %p
+      Agente aqui!
+    -if @caso.estado == Caso::ESTADO[:aguardando_peticao]
+      %p
+        Aguardando notificação.
+  .juiz
+    %p
+      Juiz aqui!
+    -if @caso.estado == Caso::ESTADO[:aguardando_peticao]
+      %p
+        Aguardando peticionários submeterem a petição inicial.

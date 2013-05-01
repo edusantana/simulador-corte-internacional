@@ -1,6 +1,6 @@
 class Simulacao < ActiveRecord::Base
   
-  attr_accessible :iniciada
+  attr_accessible :iniciada, :caso
   
   resourcify
   belongs_to :turma
@@ -9,6 +9,7 @@ class Simulacao < ActiveRecord::Base
   
   def inicia
     self.iniciada = true
+    caso.estado = Caso::ESTADO[:aguardando_peticao]
   end
   
   # (:simulacao, :turma=>@turma, :proposta=>@proposta)

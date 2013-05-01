@@ -1,0 +1,6 @@
+.peticionario
+  %p
+    Peticionário aqui!
+  -if @caso.estado == Caso::ESTADO[:aguardando_peticao]
+    %p
+      Aguardando submissão da petição.
